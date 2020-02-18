@@ -22,7 +22,7 @@ function invalidPinTypeErr (type) {
 }
 
 function toKey (cid) {
-  return '/' + bs58.encode(cid.multihash)
+  return '/' + cid.multihash.toString('base64')
 }
 
 const PinTypes = {
